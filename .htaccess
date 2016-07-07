@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule index.php/(\w+)/(\w+)/(\w+) index.php?P=$1&C=$2&A=$3
