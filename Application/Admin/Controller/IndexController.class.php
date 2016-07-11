@@ -7,11 +7,9 @@
  Copyright © 2016 - 2017 倾旋 All Rights Reserved.
  */
 namespace Admin\Controller;
-class IndexController{
+use Lyre\Kernel\Controller;
+class IndexController extends Controller{
     public function index(){
-        echo 'AdminAA';
+        $this->display();
     }
-
-
-
 }

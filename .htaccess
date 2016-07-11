@@ -1,2 +1,5 @@
 RewriteEngine On
 RewriteRule index.php/(\w+)/(\w+)/(\w+) index.php?P=$1&C=$2&A=$3
+#Header [condition] set|append|add|unset|echo header [value] [early|env=[!]variable]
+Header set X-Powered-By "Lyre Framework Version 1.0"
+Header add My-Blog "www.0nlis.com"

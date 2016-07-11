@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lyre Framework 服务器错误</title>
+    <link rel="stylesheet" href="/Public/css/bootstrap.min.css">
+    <script src="/Public/js/jquery.min.js"></script>
+    <script src="/Public/js/bootstrap.min.js"></script>
+    <style>
+        #Lyre{
+            width: 100%;
+            height: 400px;
+            border-radius: 20px;
+            font-size: 20px;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+<div id="Lyre">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div style="font-size: 50px;font-style: italic">Lyre Framework &ndash; Version 1.0</div>
+                <h3 style="margin-left: 80px;">
+                    <button type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-backward"></span>
+                        <sc>3</sc>s后返回主页
+                    </button>
+                    服务器出错啦!~&nbsp; <small>Status:500</small></h3>
+                <h5 style="margin: auto;margin-top: 40px;">Copyright © 2005 - 2016 <a href="http://0nlis.com">倾旋</a> All Rights Reserved. </h5>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+    time=3;
+    url='http://'+location.hostname;
+    function go(){
+        var t=setTimeout(go,1000);
+        $("sc").html(time);
+        time--;
+        if(time==0){
+            clearTimeout(t);
+            window.location.href=url;
+        }
+    }
+    go();
+    $(".btn-default").click(function () {
+        window.location.href=url;
+    });
+</script>
+</body>
+</html>
